@@ -11,7 +11,9 @@ x_max = 2*pi;
 
 % Initial condition
 X_vec = linspace(0, x_max, np);
-T_vec = sin(X_vec);
+%T_vec = sin(X_vec);
+T_vec = zeros(size(X_vec));
+T_vec(abs(X_vec-x_max/2)<1) = 1;
 
 % Plot initiation
 h_fig = figure;
